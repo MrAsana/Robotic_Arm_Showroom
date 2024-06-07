@@ -39,5 +39,8 @@ Thanks to DougDougGithub, these are well commented in the file.
 
 
 
+This project was used in the promotional activities of Amber Lucid One and was broadcast live on twitch
+
+
 This project was completed relatively early and has not been tested in detail
 
