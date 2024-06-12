@@ -37,7 +37,7 @@ def move_joint(IP_ADDR="127.0.0.1", port=26001, pos=None, duration=5):
     if pos is None:
         pos = zero
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    s.bind(("0.0.0.0", 12404))
+    #s.bind(("0.0.0.0", 12404))
     buf = robot_joint_position()
     buf.cmd_no = 4
     buf.length = 44

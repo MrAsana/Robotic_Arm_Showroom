@@ -50,7 +50,7 @@ def check_activated(IP_ADDR="127.0.0.1", port=26001, timeout=2):
 def on_active_mode(IP_ADDR="127.0.0.1", port=26001):
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.settimeout(3)
-    s.bind(("0.0.0.0", 12430))
+    #s.bind(("0.0.0.0", 12430))
     payloadS = robot_joint_position(10, 9, 114514, 1)
     s.sendto(payloadS, (IP_ADDR, port))
     try:
@@ -67,7 +67,7 @@ def on_position_mode(IP_ADDR="127.0.0.1", port=26001):
     if check_activated(IP_ADDR=IP_ADDR, port=port):
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         s.settimeout(3)
-        s.bind(("0.0.0.0", 12430))
+        #s.bind(("0.0.0.0", 12430))
         payloadS = robot_joint_position(10, 9, 114514, 1)
 
         payloadS = robot_joint_position(10, 10, 114514, 2)
@@ -88,7 +88,7 @@ def on_current_mode(IP_ADDR="127.0.0.1", port=26001):
     if check_activated(IP_ADDR=IP_ADDR, port=port):
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         s.settimeout(3)
-        s.bind(("0.0.0.0", 12430))
+        #s.bind(("0.0.0.0", 12430))
         payloadS = robot_joint_position(10, 10, 114514, 4)
         s.sendto(payloadS, (IP_ADDR, port))
         try:
@@ -105,7 +105,7 @@ def on_current_mode(IP_ADDR="127.0.0.1", port=26001):
 def on_deactivate_mode(IP_ADDR="127.0.0.1", port=26001):
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.settimeout(3)
-    s.bind(("0.0.0.0", 12330))
+    #s.bind(("0.0.0.0", 12330))
     payloadS = robot_joint_position(10, 9, 114514, 0)
     s.sendto(payloadS, (IP_ADDR, port))
     s.settimeout(1)

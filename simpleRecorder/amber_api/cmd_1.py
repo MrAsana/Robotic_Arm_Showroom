@@ -33,7 +33,7 @@ class robot_mode_data(Structure):  # ctypes struct for receive
 
 def get_status(IP_ADDR="127.0.0.1", port=26001):
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    s.bind(("0.0.0.0", 12401))
+    #s.bind(("0.0.0.0", 12401))
     payloadS = robot_joint_position(1, 8, 11)
     s.sendto(payloadS, (IP_ADDR, port))
     s.settimeout(3)

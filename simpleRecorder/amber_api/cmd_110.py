@@ -31,7 +31,7 @@ class robot_mode_data(Structure):                                   # ctypes str
 
 def get_work_mode(IP_ADDR="127.0.0.1", port=26001):
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    s.bind(("0.0.0.0", 12430))
+    #s.bind(("0.0.0.0", 12430))
     payloadS = robot_joint_position(110, 12, 0, 8)
     s.sendto(payloadS, (IP_ADDR, port))
     s.settimeout(1)
