@@ -45,3 +45,11 @@ DEFAULT_ACCURACY = 0.0175  # rad, for every joint, 0.0175 rad= 1 degree
 ```
 
 Mainly change the IP address to the IP address of the industrial control computer that comes with the robot arm.
+
+NOTE: For a 6-actuator system, change here in amber_api/cmd_10.py
+in line 42
+
+```
+            if activated > 6: # Change here to 5 for a 6 actuator system
+                return True
+```
